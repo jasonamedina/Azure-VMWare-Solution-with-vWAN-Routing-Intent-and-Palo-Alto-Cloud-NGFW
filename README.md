@@ -2,8 +2,8 @@
 
 In this article, you will learn how Virtual WAN with Routing Intent works with the Palo Alto SaaS firewall to connect and route traffic between different networks. You will see how this applies to an Azure VMware Solution private cloud, on-premises sites, and Azure native networks. This article does not cover how to set up or configure Virtual WAN with Routing Intent and Palo Alto SaaS.
 
-## Virtual Network WAN scenario  
-Virtual WAN with Routing Intent is only supported with Virtual WAN Standard SKU. Virtual WAN with Routing Intent provides the capability to send all Internet traffic and Private network traffic (RFC 1918) to a security solution like Azure Firewall, a third-party Network Virtual Appliance (NVA), or SaaS solution. In the scenario, we have a network topology that spans only a single region. There is one Virtual WAN with a single hub(Hub1) and the Hub has the Palo Alto SaaS Firewall deployed. Having a firewall deployed in the Hub is a technical prerequisite to Routing Intent. Virtual WAN Hub1 has Routing Intent enabled.    
+## Virtual WAN network scenario  
+Virtual WAN with Routing Intent is only supported with Virtual WAN Standard SKU. Virtual WAN with Routing Intent provides the capability to send all Internet traffic and Private network traffic (RFC 1918 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to a security solution like Azure Firewall, a third-party Network Virtual Appliance (NVA), or Palo Alto SaaS solution. In the scenario, we have a network topology that spans only a single region. There is one Virtual WAN with a single hub(Hub1) and the Hub has the Palo Alto SaaS Firewall deployed. Having a firewall deployed in the Hub is a technical prerequisite to Routing Intent. Virtual WAN Hub1 has Routing Intent enabled.    
 
 The Virtual WAN also has an Azure VMware Solution Private Cloud, an Azure Virtual Network, and an on-premises site connecting via ExpressRoute. We review these components in more detail later in this document.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/03a0c0df-da7c-4394-9afc-4b7bf96434c4)
@@ -11,9 +11,26 @@ The Virtual WAN also has an Azure VMware Solution Private Cloud, an Azure Virtua
 
 >[!NOTE]
 >  When configuring Azure VMware Solution with Secure Virtual WAN Hubs, ensure optimal routing results on the hub by setting the Hub Routing Preference option to "AS Path." - see [Virtual hub routing preference](https://learn.microsoft.com/azure/virtual-wan/about-virtual-hub-routing-preference)
->
 
-### Azure VMware Solution connectivity & traffic flows
+### ExpressRoute Global Reach deployment options 
+
+Global Reach establishes a direct logical link via the Microsoft backbone, connecting Azure VMware Solution to On-Premises. 
+ 
+A benefit of using Global Reach is that it makes the design simpler with a direct logical connection between Azure VMware Solution and On-Premises. It also helps troubleshoot traffic between Global Reach sites and removes the worry of throughput limitations at the Virtual WAN Hub level. 
+
+When Global Reach is deployed, traffic between the Global Reach sites bypasses Virtual WAN Hub Firewall. This means the Virtual WAN Hub firewall will not inspect any Global Reach traffic that goes between the Azure VMware Solution and the On-Premises datacenter. 
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/a7add202-9c9d-48eb-a798-144f9655f421)
+
+
+When using Virtual WAN Routing-Intent without Global Reach, from an on-premises network, you cannot advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes.
+In regions without Global Reach support or with a security requirement to inspect traffic between Azure VMware Solution and on-premises at the hub firewall, a support ticket must be opened to enable ExpressRoute to ExpressRoute transitivity. Once the support ticket has been fulfilled, the Virtual WAN Hub will advertise the default RFC 1918 addresses to Azure VMware Solution and to on-premises (as shown below in the diagram).  ExpressRoute to ExpressRoute transitivity isn't supported by default with Virtual WAN with Routing Intent. [Transit connectivity between ExpressRoute circuits with routing intent](https://learn.microsoft.com/en-us/azure/virtual-wan/how-to-routing-policies#expressroute)  
+
+To demonstrate how the hub firewall can inspect traffic, this design does not use Global Reach
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/29c3ed30-a692-47d4-a687-e516e5921ae0)
+
+
+
+### Azure VMware Solution connectivity 
 
 This section focuses on only the Azure VMware Solution private cloud. The Azure VMware Solution private cloud has an ExpressRoute connection to the hub (connections labeled as "E").
 
