@@ -21,7 +21,8 @@ Azure VMware Solution Cloud Region connects back to an on-premises via ExpressRo
 
 The diagram illustrates the Route Table as seen from the perspective of Azure VMware Solution.
 
-![Diagram of Single-Region Azure VMware Solution with Cross Azure VMware Solution Topology](./media/single-region-virtual-wan-with-globalreach-2.png)  
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/96d13428-bb4f-4b10-b437-064d09607791)
+
 **Traffic Flow**  
 
 | From |   To |  Virtual Network | on-premises |
