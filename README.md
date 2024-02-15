@@ -5,26 +5,13 @@ In this article, you will learn how Virtual WAN with Routing Intent works with t
 ## Virtual Network WAN scenario  
 Virtual WAN with Routing Intent is only supported with Virtual WAN Standard SKU. Virtual WAN with Routing Intent provides the capability to send all Internet traffic and Private network traffic (RFC 1918) to a security solution like Azure Firewall, a third-party Network Virtual Appliance (NVA), or SaaS solution. In the scenario, we have a network topology that spans only a single region. There is one Virtual WAN with a single hub(Hub1) and the Hub has the Palo Alto SaaS Firewall deployed. Having a firewall deployed in the Hub is a technical prerequisite to Routing Intent. Virtual WAN Hub1 has Routing Intent enabled.    
 
-The single region also has an Azure VMware Solution Private Cloud and an Azure Virtual Network. There is also an on-premises site connecting to the region, which we review in more detail later in this document.  
+The Virtual WAN also has an Azure VMware Solution Private Cloud, an Azure Virtual Network, and an on-premises site connecting via ExpressRoute. We review these components in more detail later in this document.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/03a0c0df-da7c-4394-9afc-4b7bf96434c4)
 
 
-
 >[!NOTE]
->  When configuring Azure VMware Solution with Secure Virtual WAN Hubs, ensure optimal routing results on the hub by setting the Hub Routing Preference option to "AS Path." - see [Virtual hub routing preference](/azure/virtual-wan/about-virtual-hub-routing-preference)
+>  When configuring Azure VMware Solution with Secure Virtual WAN Hubs, ensure optimal routing results on the hub by setting the Hub Routing Preference option to "AS Path." - see [Virtual hub routing preference](https://learn.microsoft.com/azure/virtual-wan/about-virtual-hub-routing-preference)
 >
-
-### Understanding Topology Connectivity 
-
-| Connection | Description  |
-|:-------------------- |:--------------------  |
-| Connections (E) | Azure VMware Solution private cloud managed ExpressRoute connection to the hub.  |
-| Connection (A) | Azure VMware Solution Global Reach connection back to on-premises.  |
-| Connections (F) | on-premises ExpressRoute connection to the hub.  |
-
-## Single-region Secure Virtual WAN Traffic Flows
-
-The following sections cover traffic flows and connectivity for Azure VMware Solution, on-premises, Azure Virtual Networks, and the Internet.
 
 ### Azure VMware Solution connectivity & traffic flows
 
