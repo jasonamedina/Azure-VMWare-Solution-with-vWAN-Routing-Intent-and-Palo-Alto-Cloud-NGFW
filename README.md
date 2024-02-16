@@ -10,7 +10,7 @@ The diagram shows the Virtual WAN design, which has three components: an Azure V
 
 
 >[!NOTE]
->  When configuring Azure VMware Solution with Secure Virtual WAN Hubs, ensure optimal routing results on the hub by setting the Hub Routing Preference option to "AS Path." - see [Virtual hub routing preference](https://learn.microsoft.com/azure/virtual-wan/about-virtual-hub-routing-preference)
+>  When configuring Azure VMware Solution with Virtual WAN Hubs, ensure optimal routing results on the hub by setting the Hub Routing Preference option to "AS Path." - see [Virtual hub routing preference](https://learn.microsoft.com/azure/virtual-wan/about-virtual-hub-routing-preference)
 
 ### ExpressRoute Global Reach deployment options 
 
