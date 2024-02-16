@@ -120,6 +120,8 @@ The diagram illustrates the Route Table as seen from the perspective of Azure VM
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/eb69f1c8-70d2-42c9-bfb5-a23c262b40d2)
 
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/7b46532a-256f-480b-b84e-4e3f5162dca7)
+
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/7daddcf3-752f-4b8e-8ae5-54dd68aad879)
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/cba68635-e783-4adc-8156-6c71324735a1)
