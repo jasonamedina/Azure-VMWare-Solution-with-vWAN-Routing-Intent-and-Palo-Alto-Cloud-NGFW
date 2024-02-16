@@ -45,6 +45,9 @@ The diagram illustrates the Route Table as seen from the perspective of Azure VM
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/b9e59f9d-1117-4d5d-9c6c-da3abfbb9af1)
 
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/db616498-c5fb-42ec-b5a9-c416f2eb94ea)
+
+
 
 
 
@@ -74,6 +77,9 @@ The diagram illustrates the Route Table as seen from the perspective of the Azur
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/d019ef47-a378-44df-99d2-46c7ebf2dcd0)
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/65c5cd43-709b-41d5-834b-a34dbf00c5fc)
+
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/e60d01e7-9203-45b8-bf68-46b99b1824ab)
+
 
 
 ### Internet connectivity
