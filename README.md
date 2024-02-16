@@ -62,6 +62,12 @@ The diagram illustrates the Route Table as seen from the perspective of on-premi
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/dc186f01-6792-4fa8-9ead-6fb4bfc3d2ff)
 
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/0a6b25a5-143e-4250-81e2-ec5d88ecd014)
+
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/5f2f25be-855a-4f41-b27d-d8d7a914730f)
+
+
+
 
 
 
