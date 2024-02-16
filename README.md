@@ -19,6 +19,10 @@ Global Reach establishes a direct logical link via the Microsoft backbone, conne
 A benefit of using Global Reach is that it makes the design simpler with a direct logical connection between Azure VMware Solution and On-Premises. It also helps troubleshoot traffic between Global Reach sites and removes the worry of throughput limitations at the Virtual WAN Hub level. 
 
 When Global Reach is deployed, traffic between the Global Reach sites bypasses Virtual WAN Hub Firewall. This means the Virtual WAN Hub firewall will not inspect any Global Reach traffic that goes between the Azure VMware Solution and the On-Premises datacenter. 
+
+> [!NOTE]
+> When utilizing Global Reach, traffic between these locations bypasses the Secure Virtual WAN and the Hub Firewall. To ensure optimal security, we recommend inspecting traffic within the Azure VMware Solution environment's NSX-T or using an on-premises firewall between these locations.
+>
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/a7add202-9c9d-48eb-a798-144f9655f421)
 
 
@@ -34,17 +38,15 @@ To demonstrate how the hub firewall can inspect traffic, this design does not us
 
 This section focuses on only the Azure VMware Solution private cloud. The Azure VMware Solution private cloud has an ExpressRoute connection to the hub (connections labeled as "E").
 
-Azure VMware Solution Cloud Region connects back to an on-premises via ExpressRoute Global Reach. Azure VMware Solution Global Reach connection is shown as "Global Reach (A)". Keep in mind that Global Reach traffic will never transit any hub firewalls. See traffic flow section for more information. 
 
 The diagram illustrates the Route Table as seen from the perspective of Azure VMware Solution.
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/96d13428-bb4f-4b10-b437-064d09607791)
 
-**Traffic Flow**  
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/b9e59f9d-1117-4d5d-9c6c-da3abfbb9af1)
 
-| From |   To |  Virtual Network | on-premises |
-| -------------- | -------- | ---------- | ---|
-| Azure VMware Solution Cloud    | &#8594;| HubFw>Virtual Network|  GlobalReach(A)>on-premises   | 
+
+
 
 ### on-premises connectivity & traffic flow
 
@@ -54,16 +56,12 @@ On-premises systems can communicate to Azure VMware Solution via connection "Glo
 
 The diagram illustrates the Route Table as seen from the perspective of on-premises and Azure VMware Solution.
 
-![Diagram of Single-Region Azure VMware Solution with on-premises](./media/single-region-virtual-wan-with-globalreach-3.png)  
-**Traffic Flow**  
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/9a8a63f4-4ebb-422d-bf45-20b685f24862)
 
-| From |   To |  Virtual Network  | Azure VMware Solution |
-| -------------- | -------- | ---------- | ---| 
-| on-premises    | &#8594;| HubFw>Virtual Network| Global Reach(A)>Azure VMware Solution Cloud | 
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/dc186f01-6792-4fa8-9ead-6fb4bfc3d2ff)
 
-> [!NOTE]
-> When utilizing Global Reach, traffic between these locations bypasses the Secure Virtual WAN and the Hub Firewall. To ensure optimal security, we recommend inspecting traffic within the Azure VMware Solution environment's NSX-T or using an on-premises firewall between these locations.
->
+
+
 
 
 ### Azure Virtual Network connectivity & traffic flow
