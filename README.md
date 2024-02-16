@@ -36,11 +36,7 @@ To demonstrate how the hub firewall can inspect traffic, this design does not us
 
 ### Azure VMware Solution connectivity 
 
-This section focuses on only the Azure VMware Solution private cloud. The Azure VMware Solution private cloud has an ExpressRoute connection to the hub (connections labeled as "E").
-
-
-The diagram illustrates the Route Table as seen from the perspective of Azure VMware Solution.
-
+The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to Azure VMware Solution. Unless Azure VMware Solution has a specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/96d13428-bb4f-4b10-b437-064d09607791)
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/b9e59f9d-1117-4d5d-9c6c-da3abfbb9af1)
