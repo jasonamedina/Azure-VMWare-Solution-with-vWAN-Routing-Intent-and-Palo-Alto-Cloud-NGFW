@@ -5,7 +5,7 @@ In this article, you will learn how Virtual WAN with Routing Intent works with t
 ## Virtual WAN network scenario  
 Virtual WAN with Routing Intent is only supported with Virtual WAN Standard SKU. Virtual WAN with Routing Intent provides the capability to send all Internet traffic and Private network traffic (RFC 1918 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to a security solution like Azure Firewall, a third-party Network Virtual Appliance (NVA), or Palo Alto SaaS solution. In the scenario, we have a network topology that spans only a single region. There is one Virtual WAN with a single hub(Hub1) and the Hub has the Palo Alto SaaS Firewall deployed. Having a firewall deployed in the Hub is a technical prerequisite to Routing Intent. Virtual WAN Hub1 has Routing Intent enabled.    
 
-The Virtual WAN also has an Azure VMware Solution Private Cloud, an Azure Virtual Network, and an on-premises site connecting via ExpressRoute. We review these components in more detail later in this document.
+The diagram shows the Virtual WAN design, which has three components: an Azure VMware Solution Private Cloud, an Azure Virtual Network, and an on-premises site. The Azure VMware Solution and the on-premises site use ExpressRoute to connect to the hub, while the Azure Virtual Network uses a VNet Peering. We will go into more detail about each component later in this document.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/03a0c0df-da7c-4394-9afc-4b7bf96434c4)
 
 
