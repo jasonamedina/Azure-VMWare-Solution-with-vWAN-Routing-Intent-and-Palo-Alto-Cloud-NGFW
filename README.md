@@ -15,7 +15,8 @@ The diagram shows the Virtual WAN design, which has three components: an Azure V
 ### ExpressRoute Global Reach deployment options 
 
 Global Reach establishes a direct logical link via the Microsoft backbone, connecting Azure VMware Solution to On-Premises. 
- 
+
+ **With Global Reach**  
 A benefit of using Global Reach is that it makes the design simpler with a direct logical connection between Azure VMware Solution and On-Premises. It also helps troubleshoot traffic between Global Reach sites and removes the worry of throughput limitations at the Virtual WAN Hub level. 
 
 When Global Reach is deployed, traffic between the Global Reach sites bypasses Virtual WAN Hub Firewall. This means the Virtual WAN Hub firewall will not inspect any Global Reach traffic that goes between the Azure VMware Solution and the On-Premises datacenter. 
@@ -25,7 +26,7 @@ When Global Reach is deployed, traffic between the Global Reach sites bypasses V
 >
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/a7add202-9c9d-48eb-a798-144f9655f421)
 
-
+**Without Global Reach**  
 When using Virtual WAN Routing-Intent without Global Reach, from an on-premises network, you cannot advertise the exact default RFC 1918 address prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) back to Azure. Instead, you must always advertise more specific routes.
 In regions without Global Reach support or with a security requirement to inspect traffic between Azure VMware Solution and on-premises at the hub firewall, a support ticket must be opened to enable ExpressRoute to ExpressRoute transitivity. Once the support ticket has been fulfilled, the Virtual WAN Hub will advertise the default RFC 1918 addresses to Azure VMware Solution and to on-premises (as shown below in the diagram).  ExpressRoute to ExpressRoute transitivity isn't supported by default with Virtual WAN with Routing Intent. [Transit connectivity between ExpressRoute circuits with routing intent](https://learn.microsoft.com/en-us/azure/virtual-wan/how-to-routing-policies#expressroute)  
 
