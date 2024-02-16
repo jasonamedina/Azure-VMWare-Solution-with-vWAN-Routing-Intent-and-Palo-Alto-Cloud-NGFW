@@ -39,10 +39,20 @@ To demonstrate how the hub firewall can inspect traffic, this design does not us
 The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to Azure VMware Solution. Unless Azure VMware Solution has a specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/96d13428-bb4f-4b10-b437-064d09607791)
 
+**AVS NSX-T Tier-0 Route Table**  
+The NSX-T Tier-0 has two BGP peerings with ECMP enabled, which results in two routes for each prefix.
+
+The yellow routes indicate that NSX-T Tier-0 has learned the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16). These routes will be used by Azure VMware Solution if it lacks a more specific route to the destination. Azure VMware Solution does not learn the on-premises network, 10.234.151.0/24, which is expected as the hub does not advertise this route. Thus, Azure VMware Solution uses the 10.0.0.0/8 route to reach on-premises.
+
+As you can see highlighted in green, Azure VMWare Solution learns the Hub1 network (10.2.0.0/16) and the Spoke VNet (10.255.231.192/28).  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/b9e59f9d-1117-4d5d-9c6c-da3abfbb9af1)
 
+**Palo Alto Traffic Inspection** 
+
+This route is the hub network 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/104f7036-a10e-4971-8b9b-34a8c51358d6)
 
+This route is the Spoke VNet
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/064eb6c0-928d-47f5-9149-93fd8a6bb656)
 
 
