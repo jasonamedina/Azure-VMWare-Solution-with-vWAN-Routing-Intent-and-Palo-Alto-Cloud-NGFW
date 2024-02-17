@@ -47,7 +47,7 @@ The yellow routes indicate that NSX-T Tier-0 has learned the default RFC 1918 ad
 As you can see highlighted in green, Azure VMWare Solution learns the Hub1 network (10.2.0.0/16) and the Spoke VNet (10.255.231.192/28).  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/b9e59f9d-1117-4d5d-9c6c-da3abfbb9af1)
 
-**Palo Alto Traffic Inspection** 
+**Palo Alto Traffic Inspection**  
 The following screenshots show examples of traffic being inspected on the firewall.
 
 Traffic going from the Azure VMware Solution VM to the Azure VNet VM
