@@ -65,12 +65,11 @@ Traffic going from the Azure VMware Solution VM to the On-Premises VM
 
 ### on-premises connectivity & traffic flow
 
-This section focuses only on the on-premises site. As shown in the diagram, the on-premises site has an ExpressRoute connection to the hub (connection labeled as "F").
-
-On-premises systems can communicate to Azure VMware Solution via connection "Global Reach (A)".
+The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to on-premises. Unless on-premises has a specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1. You cannot advertise the default RFC 1918 prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) from your on-premises network to Azure; you must advertise more specific routes instead.
 
 The diagram illustrates the Route Table as seen from the perspective of on-premises and Azure VMware Solution.
 
+**on-premises Route Table**  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/9a8a63f4-4ebb-422d-bf45-20b685f24862)
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/dc186f01-6792-4fa8-9ead-6fb4bfc3d2ff)
