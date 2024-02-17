@@ -48,11 +48,12 @@ As you can see highlighted in green, Azure VMWare Solution learns the Hub1 netwo
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/b9e59f9d-1117-4d5d-9c6c-da3abfbb9af1)
 
 **Palo Alto Traffic Inspection** 
+The following screenshots show examples of traffic being inspected on the firewall.
 
-This route is the hub network 
+Traffic going from the Azure VMware Solution VM to the Azure VNet VM
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/104f7036-a10e-4971-8b9b-34a8c51358d6)
 
-This route is the Spoke VNet
+Traffic going from the Azure VMware Solution VM to the On-Premises VM
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/064eb6c0-928d-47f5-9149-93fd8a6bb656)
 
 
