@@ -63,7 +63,7 @@ Traffic going from the Azure VMware Solution VM to the On-Premises VM
 
 
 
-### on-premises connectivity & traffic flow
+### on-premises connectivity
 
 The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to on-premises. Unless on-premises has a specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1. You cannot advertise the default RFC 1918 prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) from your on-premises network to Azure; you must advertise more specific routes instead.
 
@@ -92,7 +92,7 @@ Traffic going from the on-premises VM to the Azure VNet VM
 
 
 
-### Azure Virtual Network connectivity & traffic flow
+### Azure Virtual Network connectivity
 
 This section focuses only on connectivity from an Azure Virtual Network perspective. As depicted in the diagram, the Virtual Network has a Virtual Network peering directly to the hub.
 
