@@ -67,6 +67,8 @@ Traffic going from the Azure VMware Solution VM to the On-Premises VM
 
 The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to on-premises. Unless on-premises has a specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1. You cannot advertise the default RFC 1918 prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) from your on-premises network to Azure; you must advertise more specific routes instead.
 
+To simulate an on-premises environment, I created a virtual machine (VM) in a Google Cloud virtual private cloud (VPC) and connected it to a MegaPort MCR (Megaport Cloud Router). 
+
 The diagram illustrates the Route Table as seen from the perspective of on-premises and Azure VMware Solution.
 
 
