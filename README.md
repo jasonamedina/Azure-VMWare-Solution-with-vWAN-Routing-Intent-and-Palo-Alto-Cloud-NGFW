@@ -69,11 +69,12 @@ The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addre
 
 To simulate an on-premises environment, I created a virtual machine (VM) in a Google Cloud virtual private cloud (VPC) and connected it to a MegaPort MCR (Megaport Cloud Router). 
 
-The diagram illustrates the Route Table as seen from the perspective of on-premises and Azure VMware Solution.
-
-
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/9a8a63f4-4ebb-422d-bf45-20b685f24862)
+
 **on-premises Route Table**  
+The yellow routes indicate that the Google Cloud VPC has learned the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16). These routes will be used if it lacks a more specific route to the destination. The on-premises site does not learn the Azure VMware Solution network, 192.168.101.0/24, which is expected as the hub does not advertise this route. Thus, on-premises uses the 192.168.0.0/16 route to reach Azure VMware Solution.
+
+As you can see highlighted in green, on-premises learns the Hub1 network (10.2.0.0/16) and the Spoke VNet (10.255.231.192/28). 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/dc186f01-6792-4fa8-9ead-6fb4bfc3d2ff)
 
 **Palo Alto Traffic Inspection**  
