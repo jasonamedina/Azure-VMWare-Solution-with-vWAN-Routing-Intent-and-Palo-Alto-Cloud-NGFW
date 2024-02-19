@@ -99,12 +99,16 @@ The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addre
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/d019ef47-a378-44df-99d2-46c7ebf2dcd0)
 
-**Azure VNet VM's Effective Routes**  
+**Azure VNet VM Effective Routes**  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/65c5cd43-709b-41d5-834b-a34dbf00c5fc)
 
 **Palo Alto Traffic Inspection**  
+The following screenshots show examples of traffic being inspected on the firewall.
+
+Traffic going from the Azure VNet VM to the on-premises VM
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/e60d01e7-9203-45b8-bf68-46b99b1824ab)
 
+Traffic going from the Azure VNet VM to the Azure VMware Solution VM
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/8cc8b0f3-0d98-4b56-95b9-a23f7b6b156d)
 
 
