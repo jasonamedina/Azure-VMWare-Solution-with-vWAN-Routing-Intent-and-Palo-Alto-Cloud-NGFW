@@ -94,15 +94,15 @@ Traffic going from the on-premises VM to the Azure VNet VM
 
 ### Azure Virtual Network connectivity
 
-This section focuses only on connectivity from an Azure Virtual Network perspective. As depicted in the diagram, the Virtual Network has a Virtual Network peering directly to the hub.
+The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to the Spoke VNet. Unless on-premises has a specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1. The VNet will learn only the default RFC 1918 addresses and not any specific routes.
 
-The diagram illustrates how all Azure native resources in the Virtual Network learn routes under their "Effective Routes". A Secure Hub with enabled Routing Intent always sends the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to peered Virtual Networks, plus any other prefixes that have been added as "Private Traffic Prefixes" - see [Routing Intent Private Address Prefixes](/azure/virtual-wan/how-to-routing-policies#azurefirewall). In our scenario, with Routing Intent enabled, all resources in the Virtual Network currently possess the default RFC 1918 address and use the hub firewall as the next hop. All traffic ingressing and egressing the Virtual Networks will always transit the Hub Firewall. For more information, see the traffic flow section for more detailed information.
 
-The diagram illustrates the Route Table as seen from the perspective of the Azure Virtual Network and Azure VMware Solution. 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/d019ef47-a378-44df-99d2-46c7ebf2dcd0)
 
+**Azure VNet VM's Effective Routes**  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/65c5cd43-709b-41d5-834b-a34dbf00c5fc)
 
+**Palo Alto Traffic Inspection**  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/e60d01e7-9203-45b8-bf68-46b99b1824ab)
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/8cc8b0f3-0d98-4b56-95b9-a23f7b6b156d)
