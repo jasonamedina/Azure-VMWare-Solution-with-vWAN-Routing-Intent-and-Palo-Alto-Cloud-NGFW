@@ -74,8 +74,12 @@ The diagram illustrates the Route Table as seen from the perspective of on-premi
 **on-premises Route Table**  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/dc186f01-6792-4fa8-9ead-6fb4bfc3d2ff)
 
-![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/0a6b25a5-143e-4250-81e2-ec5d88ecd014)
+**Palo Alto Traffic Inspection**  
+The following screenshots show examples of traffic being inspected on the firewall.
 
+Traffic going from the on-premises VM to the Azure VMware Solution VM
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/0a6b25a5-143e-4250-81e2-ec5d88ecd014)
+Traffic going from the on-premises VM to the Azure VNet VM
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/69ddbd71-dd64-4aa7-8add-17b5e2d8d7f2)
 
 
