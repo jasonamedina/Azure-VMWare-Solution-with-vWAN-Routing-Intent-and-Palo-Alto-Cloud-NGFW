@@ -136,14 +136,14 @@ The diagram illustrates the Route Table as seen from the perspective of Azure VM
 You can choose to advertise the default route over specific ExpressRoute connections. We recommend not to advertise the default route to your on-premises ExpressRoute connections. In our scenario, we are allowing the advertisement of the default route over the "AVS Managed ExpressRoute circuit". You can find this setting under the Hub/ExpressRoute and then you can edit the ExpressRoute. By changing the "Propagate Default Route" to "Enable", we allow the advertisement of the default route over this connection. 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/7b46532a-256f-480b-b84e-4e3f5162dca7)
 
-The example below shows the Azure VM running a curl ifconfig.me with the result of the Public IP address 172.174.86.27 which is the public IP assigned to the SaaS Firewall.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/7daddcf3-752f-4b8e-8ae5-54dd68aad879)
 
-Traffic going from the Azure VNet VM to the internet destined to 8.8.8.8.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/cba68635-e783-4adc-8156-6c71324735a1)
 
+The example below shows the Azure VM running a curl ifconfig.me with the result of the Public IP address 172.174.86.27 which is the public IP assigned to the SaaS Firewall.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/7fefba55-e4ff-4cdd-8098-a1923be6fa5e)
 
+Traffic going from the Azure VNet VM to the internet destined to 8.8.8.8.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/395ca706-70d8-4571-aa64-2a8aa00a6537)
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/d41113c3-e65a-460c-bffb-0d2063d1ae2e)
