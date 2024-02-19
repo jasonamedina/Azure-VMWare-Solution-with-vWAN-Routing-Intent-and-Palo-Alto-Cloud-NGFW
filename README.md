@@ -69,9 +69,9 @@ The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addre
 
 The diagram illustrates the Route Table as seen from the perspective of on-premises and Azure VMware Solution.
 
-**on-premises Route Table**  
-![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/9a8a63f4-4ebb-422d-bf45-20b685f24862)
 
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/9a8a63f4-4ebb-422d-bf45-20b685f24862)
+**on-premises Route Table**  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/dc186f01-6792-4fa8-9ead-6fb4bfc3d2ff)
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/0a6b25a5-143e-4250-81e2-ec5d88ecd014)
