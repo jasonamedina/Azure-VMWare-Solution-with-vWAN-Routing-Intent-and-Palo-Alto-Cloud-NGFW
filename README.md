@@ -146,9 +146,12 @@ The example below shows the Azure VM running a curl ifconfig.me with the result 
 Traffic going from the Azure VNet VM to the internet destined to 8.8.8.8.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/395ca706-70d8-4571-aa64-2a8aa00a6537)
 
+Traffic going from the AVS VM to the internet destined to 8.8.8.8.
+![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/de0e1555-0b24-4e26-98ce-38650df3b9ee)
+
+Traffic going from the AVS VM to the internet destined to 8.8.8.8.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/d41113c3-e65a-460c-bffb-0d2063d1ae2e)
 
-![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/de0e1555-0b24-4e26-98ce-38650df3b9ee)
 
 
 
