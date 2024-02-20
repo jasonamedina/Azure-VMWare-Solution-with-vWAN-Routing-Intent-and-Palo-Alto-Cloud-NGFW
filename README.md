@@ -1,4 +1,4 @@
-# vWAN-Routing-Intent-with-Palo-Alto-SaaS
+# Azure VMWare Solution with vWAN Routing Intent and Palo Alto Cloud NGFW
 
 In this article, you will learn how Virtual WAN with Routing Intent works with the Palo Alto SaaS firewall to connect and route traffic between different networks. You will see how this applies to an Azure VMware Solution private cloud, on-premises sites, and Azure native networks. This article does not cover how to set up or configure Virtual WAN with Routing Intent and Palo Alto SaaS.
 
