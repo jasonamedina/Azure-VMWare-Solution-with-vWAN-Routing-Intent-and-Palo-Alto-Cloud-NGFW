@@ -36,7 +36,9 @@ To demonstrate how the hub firewall can inspect traffic, this design does not us
 
 ### Azure VMware Solution connectivity 
 
-The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to Azure VMware Solution. Unless Azure VMware Solution has a more specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1.
+In this section, we explain how Routing Intent affects Azure VMware Solution. We also show examples of NSX-T Tier-0 route table and Palo Alto Cloud NGFW inspection.The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to Azure VMware Solution. Unless Azure VMware Solution has a more specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1.
+
+**Virtual WAN Network Diagram**
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/96d13428-bb4f-4b10-b437-064d09607791)
 
 **AVS NSX-T Tier-0 Route Table**  
