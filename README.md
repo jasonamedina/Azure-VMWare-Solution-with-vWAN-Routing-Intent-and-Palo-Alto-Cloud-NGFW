@@ -131,13 +131,13 @@ Option 3: Azure Public IPv4 address to NSX-T Data Center Edge
 
 Although you can use all three options with Virtual WAN with Routing Intent, "Option 1: Internet Service hosted in Azure" is the best option when using Virtual WAN with Routing Intent and is the option that is used to provide internet connectivity in the scenario.  
 
-As mentioned earlier, when you enable Routing Intent on the Hub, it advertises RFC 1918 to all peered Virtual Networks. However, you can also advertise a default route 0.0.0.0/0 for internet connectivity to downstream resources. The default route is advertised to both the Spoke VNet and Azure VMware Solution. 
- 
+As mentioned earlier, when you enable Routing Intent on the Hub, it advertises RFC 1918 to all peered Virtual Networks. However, you can also advertise a default route 0.0.0.0/0 for internet connectivity to downstream resources as shown in the diagram below. The default route is advertised to both the Spoke VNet and Azure VMware Solution. 
+
+ ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/eb69f1c8-70d2-42c9-bfb5-a23c262b40d2)
 
 Below is an example of a screenshot showing the SNAT Public IP address 172.174.86.127 (highlighted in green) that is assigned to the Palo Alto SaaS Firewall. The private IP address 10.2.112.4 (highlighted in yellow) is the internal ip that is used as the next-hop to the firewall. 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/1a1b9aba-ae1a-4653-bc86-64700d8b834a)
 
-![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/eb69f1c8-70d2-42c9-bfb5-a23c262b40d2)
 
 You can choose to advertise the default route over specific ExpressRoute connections. We recommend not to advertise the default route to your on-premises ExpressRoute connections. In our scenario, we are allowing the advertisement of the default route over the "AVS Managed ExpressRoute circuit". You can find this setting under the Hub/ExpressRoute and then you can edit the ExpressRoute. By changing the "Propagate Default Route" to "Enable", we allow the advertisement of the default route over this connection. 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/7b46532a-256f-480b-b84e-4e3f5162dca7)
