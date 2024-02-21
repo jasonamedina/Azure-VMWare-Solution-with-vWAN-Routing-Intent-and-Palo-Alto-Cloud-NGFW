@@ -101,13 +101,13 @@ Traffic going from the on-premises VM to the Azure VNet VM
 
 ### Azure Virtual Network connectivity
 
-In this section, we explain how the Azure VNet behaves with Routing Intent. The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to the Spoke VNet. Unless on-premises has a specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1. 
+In this section, we explain how the Azure VNet behaves with Routing Intent. The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to the Spoke VNet.
 
 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/d019ef47-a378-44df-99d2-46c7ebf2dcd0)
 
 **Azure VNet VM Effective Routes**  
-The yellow routes indicate that the Azure VNet VM has learned the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16). The VNet will learn only the default RFC 1918 addresses and not any specific routes. As you can see highlighted in green, the Azure VM learns the Hub1 network (10.2.0.0/16) because the Spoke VNet is directly peered with the Hub1.
+The yellow routes indicate that the Azure VNet VM has learned the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16). The VNet will learn only the default RFC 1918 addresses and not learn any specific routes. As you can see highlighted in green, the Azure VM learns the Hub1 network (10.2.0.0/16) because the Spoke VNet is directly peered with the Hub1.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/65c5cd43-709b-41d5-834b-a34dbf00c5fc)
 
 **Palo Alto Traffic Inspection**  
