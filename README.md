@@ -153,13 +153,13 @@ As you can see below highlighted in blue, the default route 0.0.0.0/0 is being l
 The example below shows the Azure VM running a curl ifconfig.me with the result of the Public IP address 172.174.86.27 which is the public IP assigned to the SaaS Firewall.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/7fefba55-e4ff-4cdd-8098-a1923be6fa5e)
 
-Traffic being inspected on Palo Alto SaaS Firewall going from the Azure VNet VM to the internet destined to 8.8.8.8.
+Traffic being inspected on Palo Alto SaaS Firewall going from the Azure VNet VM to the internet destined to 8.8.8.8 on port 443.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/395ca706-70d8-4571-aa64-2a8aa00a6537)
 
 The example below shows the AVS VM running a curl ifconfig.me with the result of the Public IP address 172.174.86.27 which is the public IP assigned to the SaaS Firewall.  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/de0e1555-0b24-4e26-98ce-38650df3b9ee)
 
-Traffic being inspected on Palo Alto SaaS Firewall going from the AVS VM to the internet destined to 8.8.8.8.
+Traffic being inspected on Palo Alto SaaS Firewall going from the AVS VM to the internet destined to 8.8.8.8 on port 443.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/d41113c3-e65a-460c-bffb-0d2063d1ae2e)
 
 
