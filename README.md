@@ -163,7 +163,7 @@ Traffic being inspected on Palo Alto SaaS Firewall going from the AVS VM to the 
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/d41113c3-e65a-460c-bffb-0d2063d1ae2e)
 
 
-**Wrapping Up**
+### Wrapping Up
 In conclusion, the Routing Intent feature will send the default RFC 1918 addresses over peered virtual networks and over ExpressRoute connections if the hub has ExpressRoute to ExpressRoute connectivity enabled via a support ticket. The hub will learn more specific routes from on-premises, Azure VMware Solution, and Virtual Networks. The hub will send all traffic to the Palo Alto SaaS firewall for inspection and routing. The default route will be advertised only to the Azure VMware Solution and the peered virtual networks. The Azure VMware Solution and the Virtual Network VMs will use the SaaS firewall for internet connectivity.
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/1cf81685-7ba7-4edb-a66b-4049add03535)
 
