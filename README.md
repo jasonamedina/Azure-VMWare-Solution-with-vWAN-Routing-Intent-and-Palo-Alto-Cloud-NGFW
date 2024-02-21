@@ -72,7 +72,7 @@ Traffic going from the Azure VMware Solution VM to the On-Premises VM
 
 ### on-premises connectivity
 
-In this section, we explain how Routing Intent affects the on-premises site. We also show examples of on-premises route table and Palo Alto Cloud NGFW inspection.The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to on-premises. Unless on-premises has a specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1. You cannot advertise the default RFC 1918 prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) from your on-premises network to Azure; you must advertise more specific routes instead.
+In this section, we explain how Routing Intent affects the on-premises site. We also show examples of the on-premises route table and Palo Alto Cloud NGFW inspection.The diagram shows how the Virtual WAN Hub1 advertises the default RFC 1918 addresses (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) to on-premises. Unless on-premises has a specific route, it will use the default RFC 1918 addresses to send the traffic back to Hub1. You cannot advertise the default RFC 1918 prefixes (10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16) from your on-premises network to Azure; you must advertise more specific routes instead.
 
 To simulate an on-premises environment, I created a virtual machine (VM) in a Google Cloud virtual private cloud (VPC) and connected it to a MegaPort MCR (Megaport Cloud Router). 
 
