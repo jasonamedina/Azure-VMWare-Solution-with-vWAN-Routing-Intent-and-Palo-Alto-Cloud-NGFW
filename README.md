@@ -9,7 +9,6 @@ The diagram shows the Virtual WAN design, which has three components: an Azure V
 
 **Virtual WAN Network Diagram**  
 ![image](https://github.com/jasonamedina/vWAN-Routing-Intent-with-Palo-Alto-SaaS/assets/97964083/03a0c0df-da7c-4394-9afc-4b7bf96434c4)
-![image](https://github.com/jasonamedina/Azure-VMWare-Solution-with-vWAN-Routing-Intent-and-Palo-Alto-Cloud-NGFW/assets/97964083/457ba763-0932-403b-b653-5b2d6a88512d)
 
 
 
